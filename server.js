@@ -54,16 +54,24 @@ app.get("/logout", function (req, res, next) {
 });
 
 app.post("/searchVideo", async (req, res) => {
-  console.log("req body converted", req.body.convertedText);
-  const getData = await youTubeScraping(req.body.convertedText);
-  console.log("getData", getData);
-  res.status(200).send(getData);
+  try {
+    console.log("req body converted", req.body.convertedText);
+    const getData = await youTubeScraping(req.body.convertedText);
+    console.log("getData", getData);
+    res.status(200).send(getData);
+  } catch (error) {
+    console.log("error", error);
+  }
 });
 
 console.log(__dirname);
 app.get("*", (req, res) => {
-  console.log(__dirname);
-  res.sendFile(path.resolve(__dirname, "build", "index.html"));
+  try {
+    res.sendFile(path.resolve(__dirname, "build", "index.html"));
+    console.log(__dirname);
+  } catch (error) {
+    console.log("error", error);
+  }
 });
 
 app.listen(PORT, function () {
