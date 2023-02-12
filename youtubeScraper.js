@@ -61,17 +61,21 @@ dotnev.config();
 // };
 
 export const youTubeScraping = async (value) => {
-  const searchString = value;
-  console.log("key", process.env.SERP_API_KEY);
+  try {
+    const searchString = value;
+    console.log("key", process.env.SERP_API_KEY);
 
-  let params = {
-    engine: "youtube",
-    search_query: searchString,
-    api_key: process.env.SERP_API_KEY,
-  };
+    let params = {
+      engine: "youtube",
+      search_query: searchString,
+      api_key: process.env.SERP_API_KEY,
+    };
 
-  let results = await getJson("youtube", params);
+    let results = await getJson("youtube", params);
 
-  console.log(results);
-  return results.video_results[0].link;
+    console.log(results);
+    return results.video_results[0].link;
+  } catch (err) {
+    console.log(err);
+  }
 };
