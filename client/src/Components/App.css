@@ -1,0 +1,27 @@
+.search {
+  width: 80%;
+}
+
+
+.nav-header{
+  font-size: 1.3rem;
+  background-color: rgba(32, 178, 171, 0.266);
+}
+.Brand{
+  font-weight: bold;
+  color: lightseagreen;
+  font-size: 2rem;
+}
+
+.nav-link{
+  font-weight: bold;
+  color: rgb(244, 200, 118);
+}
+.active{
+  background-color: rgba(32, 178, 171, 0.266);
+  text-decoration: none;
+  padding: .5rem;
+  color: lightseagreen;
+}
+
+
