@@ -50,13 +50,7 @@ const letters = {
   ت: "ת",
 };
 
-// function changeValuesToKeys(letters) {
-//   let newLetters = {};
-//   for (let key in letters) {
-//     newLetters[letters[key]] = key;
-//   }
-//   return newLetters;
-// }
+
 
 export const converText = (text) => {
   let convertedText = "";

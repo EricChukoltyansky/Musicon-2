@@ -78,6 +78,10 @@ export const youTubeScraping = async (value) => {
     console.log(results);
     return results.video_results[0].link;
   } catch (err) {
-    console.log(err);
+    if (err.name === "AbortError") {
+      console.log("AbortError");
+    } else {
+      console.log("err", err);
+    }
   }
 };
