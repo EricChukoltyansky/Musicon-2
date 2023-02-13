@@ -71,7 +71,9 @@ export const youTubeScraping = async (value) => {
       api_key: process.env.SERP_API_KEY,
     };
 
+    console.log("1");
     let results = await getJson("youtube", params);
+    console.log("2");
 
     console.log(results);
     return results.video_results[0].link;
