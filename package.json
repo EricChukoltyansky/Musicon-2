@@ -4,6 +4,10 @@
   "description": "",
   "main": "server.js",
   "type": "module",
+  "engines": {
+    "node": ">=16 <17"
+  },
+
   "scripts": {
     "client": "npm start --prefix client",
     "server": "nodemon server.js",

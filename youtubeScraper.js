@@ -60,6 +60,49 @@ dotnev.config();
 //   }
 // };
 
+// export const youTubeScraping = async (options = {}, value) => {
+//   const { signal } = { ...options };
+//   if (signal.aborted === true) throw new Error("Operation canceled");
+
+//   const taskDone = new AbortController();
+//   signal.addEventListener(
+//     "abort",
+//     () => {
+//       taskDone.abort();
+//     },
+//     {
+//       once: true,
+//       signal: taskDone.signal,
+//     }
+//   );
+//   try {
+//     const searchString = value;
+//     console.log("key", process.env.SERP_API_KEY);
+
+//     let params = {
+//       engine: "youtube",
+//       search_query: searchString,
+//       api_key: process.env.SERP_API_KEY,
+//     };
+
+//     console.log("1");
+//     let results = await getJson("youtube", params);
+//     console.log("2");
+//     if (signal.aborted) throw new Error("Operation canceled");
+
+//     console.log(results);
+//     return results.video_results[0].link;
+//   } catch (err) {
+//     if (err.name === "AbortError") {
+//       console.log("AbortError");
+//     } else {
+//       console.log("err", err);
+//     }
+//   } finally {
+//     taskDone.abort();
+//   }
+// };
+
 export const youTubeScraping = async (value) => {
   try {
     const searchString = value;
