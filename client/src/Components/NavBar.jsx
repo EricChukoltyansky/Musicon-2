@@ -49,7 +49,7 @@ function NavBar(args) {
               Logout
             </NavItem>
           </Nav>
-          <NavbarText>Write in Hebrew Search in Arabic</NavbarText>
+          <NavbarText>Find Your Song In Your Language</NavbarText>
         </Collapse>
       </Navbar>
     </div>
